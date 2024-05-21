@@ -1,0 +1,10 @@
+.footer__paragraph{
+    font-size: var(--size-sm);
+    font-weight: 400;
+    color:#12121f ;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    background-color:#f8f8f8;
+
+}

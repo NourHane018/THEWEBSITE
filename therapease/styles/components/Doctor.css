@@ -1,0 +1,137 @@
+.Doctor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.card {
+ 
+  background:#f8f8f8;
+  width:20rem;
+  height:10rem;
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 0.8rem;
+  color:transparent;
+  cursor: pointer;
+  font-family: cursive;
+  
+}
+  
+.card:hover {
+  color: #12121f;
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5dadc4 , #315467 43%, #f8f8f8 );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+position: absolute;
+content: "";
+top: calc(var(--card-height) / 6);
+left: 0;
+right: 0;
+z-index: -1;
+height: 100%;
+width: 100%;
+margin: 0 auto;
+transform: scale(0.8);
+filter: blur(calc(var(--card-height) / 6));
+background-image: linear-gradient(
+  var(--rotate)
+  , #5dadc4 , #315467 43%, #f8f8f8 );
+  opacity: 1;
+transition: opacity .5s;
+animation: spin 2.5s linear infinite;
+}
+.doctor-name {
+  visibility: visible; 
+  position: absolute;
+  color: #12121f;
+  font-size: var(--size-2xl);
+}
+.card:hover .doctor-name {
+  visibility: hidden; 
+}
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+/* xs */
+/* @media (min-width:475px) {} */
+/* sm */
+/* @media (min-width: 640px) { } */
+/* md*/
+@media (min-width: 768px) {
+  .card {
+    width:25rem;
+    height:13rem;
+    font-size: 1.01rem;
+  }
+  }
+/* lg */
+@media (min-width: 1024px) { 
+.card {
+  width:29rem;
+  height:15rem;
+  font-size: 1.2rem;
+}
+
+
+}
+/* xl */
+@media (min-width: 1280px) { 
+.card {
+  width:33rem;
+  height:17rem;
+  font-size: 1.4rem;
+}
+
+}
+/* 2xl */
+@media (min-width: 1536px) {
+.card {
+  width:37rem;
+  height:21rem;
+  font-size:1.5rem;
+}
+
+}
