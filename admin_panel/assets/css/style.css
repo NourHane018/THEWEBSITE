@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+}
+
+body{
+  background-color:white ;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  padding: 0 0 ;
+}
+
+/*********** admin dashboard styling **********/
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 1rem;
+    column-gap:5rem;
+  }
+  .card{
+    width: 10rem;
+    height: 300px;
+    max-width: 300px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius:20px;
+    border: 1px solid #12121f;
+    border-right-color: #12121f;
+    border-bottom-color: #12121f;
+    background: #315467;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 10px 20px #12121f;
+    
+  }
+  
+  
+.card,
+* {
+  transition: 400ms;
+}
+
+.card-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-img img {
+  display: block;
+  width: 70%;
+  height: auto;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #afffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card-content {
+  position: absolute;
+  right: 32px;
+  bottom: 48px;
+  left: 32px;
+  text-align: center;
+  color: #5dadc4;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.card:hover .card-img {
+  transform: translateY(-18px);
+}
+
+.card:hover .card-img img {
+  transform: translate(-5px, -42px) scale(1.2);
+  filter: drop-shadow(4px 4px 5px #fff);
+  transition: ease-in-out 400ms; 
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+@media (min-width: 1024px) { 
+  .card{
+    width: 15rem;
+    height: 300px;
+  }
+ 
+}
+
+/************************** for sidebar ***********************************/
+
+  /* The sidebar menu */
+  .sidebar {
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Stay on top */
+      top: 0;
+      left: 0;
+      background-color: #315467; /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    }
+    
+    /* The sidebar links */
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 22px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+   
+    
+    .sidebar .side-header{
+          margin-left: 30px;
+          margin-bottom: 8px;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidebar a:hover {
+      background-color: #315467;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 2px;
+      font-size: 34px;
+      margin-left: 50px;
+     
+    }
+    
+    /* The button used to open the sidebar */
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px 15px;
+      border: none;
+      color: #fff;
+      background-color:#315467;
+
+    }
+   .sidebimg{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 3rem;
+   margin-left: 0rem;
+   }
+   .hello{
+      right: 5px;
+      font-size: 1.5rem;
+      margin-left:5rem;
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      
+    
+   }
+    .openbtn:hover {
+      color: #5dadc4;
+    
+    }
+    
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+      padding: 20px;
+    }
+    
+
+
+
+
+
+/************************************* header*********************************************** */
+.navbar{
+ display: flex;
+ align-items:normal;
+ justify-content: flex-end;
+ padding-bottom: 0rem;
+ padding-top: 0rem;
+ padding-left: 0rem;
+ padding-right: 0rem;
+ position:relative;
+ background-color: #f8f8f8;
+ height: 4rem;
+ width: 100%;
+}
+.imgg{
+  position: absolute;
+  width: 9rem;
+  height: 4rem;
+  padding: 0 0 0 0;
+  margin-bottom: 0rem;
+  left: 0rem;
+ top:0px;
+
+}
+.fa-sign-in{
+  position: absolute;
+  right: 0rem;
+  top: 1.5rem;
+  font-size:25px;
+   color:#315467;
+}
+@media (min-width: 1024px) { 
+ 
+  .imgg{
+    position: absolute;
+    width:25rem;
+    height: 4rem;
+    left: -6rem;
+  }
+  
+}
+@media (max-width:475px) {
+  .card{
+  margin-left: 6rem;
+  }
+  
+}
+@media (max-width:320px) {
+  .card{
+  margin-left: 3rem;
+  }
+  .navbar{
+   
+    width: 100%;
+   }
+}
